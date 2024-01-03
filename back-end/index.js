@@ -10,11 +10,8 @@ const paymentRoutes = require('./routes/Payment')
 const path = require('path');
 const cors = require('cors');
 
-const corsOptions = {
-  origin: 'http://localhost:4000', 
-  credentials: true,
-};
-app.use(cors(corsOptions));
+
+app.use(cors());
 
 app.use('/api/uploads', express.static(path.join(__dirname, 'uploads')));
 

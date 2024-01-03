@@ -1,5 +1,80 @@
 {
   "version": 2,
-  "builds": [{ "src": "./index.js", "use": "@vercel/node" }],
-  "routes": [{ "src": "/(.*)", "dest": "/" }]
+  "builds": [
+    { "src": "./index.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    {
+      "src": "/api/signup",
+      "dest": "/api/auth/signup.js"
+    },
+    {
+      "src": "/api/signin",
+      "dest": "/api/auth/signin.js"
+    },
+    {
+      "src": "/api/users",
+      "dest": "/api/auth/getUsers.js"
+    },
+    {
+      "src": "/api/user/:id",
+      "dest": "/api/auth/getUserById.js"
+    },
+    {
+      "src": "/api/deleteuser/:id",
+      "dest": "/api/auth/deleteUserById.js"
+    },
+    {
+      "src": "/api/updateuser/:id",
+      "dest": "/api/auth/updateUserById.js"
+    },
+    {
+      "src": "/api/current-user",
+      "dest": "/api/auth/getCurrentUser.js"
+    },
+    {
+      "src": "/api/addToCart",
+      "dest": "/api/cart/addToCart.js"
+    },
+    {
+      "src": "/api/getCart/:userId",
+      "dest": "/api/cart/getCartByUserId.js"
+    },
+    {
+      "src": "/api/removeFromCart",
+      "dest": "/api/cart/removeFromCart.js"
+    },
+    {
+      "src": "/api/create-payment-intent",
+      "dest": "/api/payment/createPaymentIntent.js"
+    },
+    {
+      "src": "/api/product/create",
+      "dest": "/api/product/createProduct.js"
+    },
+    {
+      "src": "/api/products",
+      "dest": "/api/product/AllProducts.js"
+    },
+    {
+      "src": "/api/product/:id",
+      "dest": "/api/product/getProductById.js"
+    },
+    {
+      "src": "/api/product/:id",
+      "dest": "/api/product/deleteProductById.js"
+    },
+    {
+      "src": "/api/product/:id",
+      "dest": "/api/product/updateProductById.js"
+    },
+    {
+      "src": "/api/uploads/(.*)",
+      "dest": "/uploads/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
+  ]
 }
