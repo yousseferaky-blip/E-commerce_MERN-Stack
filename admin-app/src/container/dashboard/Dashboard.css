@@ -1,0 +1,119 @@
+.containers {
+  display: flex;
+  margin-top: 0px;
+}
+
+.content {
+  padding: 20px;
+  width: 100%;
+}
+
+.Side {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+
+.close {
+  background: #34495e;
+  width: 240px;
+  padding: 20px;
+  height: 100vh;
+  transition: width 0.5s;
+}
+
+.open {
+  background: #34495e;
+  width: 40px;
+  padding: 20px 10px;
+  height: 100vh;
+}
+
+.open p {
+  display: none;
+}
+
+.open .NavLink {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0px;
+  text-decoration: none;
+}
+
+.open .ContentSide {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.open-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #ecf0f1;
+}
+
+.ContentSide {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.NavLink {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  text-decoration: none;
+  color: #ecf0f1;
+}
+.NavLink.active {
+  color: #3498db;
+}
+.NavLink p {
+  margin: 0;
+}
+
+@media screen and (max-width: 840px) {
+  .content {
+    margin-left: 0px;
+  }
+
+  .close {
+    background: #34495e;
+    width: 40px;
+    padding: 20px 0px;
+    height: 100vh;
+    transition: width 0.5s;
+  }
+
+  .close p {
+    display: none;
+  }
+
+  .open p {
+    display: block;
+  }
+
+  .open {
+    background: #34495e;
+    width: 240px;
+    padding: 20px;
+    position: relative;
+    height: 100vh;
+  }
+
+  .open .NavLink {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0px;
+    text-decoration: none;
+  }
+}

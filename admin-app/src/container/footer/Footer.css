@@ -1,0 +1,46 @@
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding:  20px ;
+}
+footer ul{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    list-style: none;
+}
+footer ul a{
+    font-size: 25px;
+    cursor: pointer;
+}
+footer span{
+    font-size: 15px;
+}
+.f{
+    color: #3b5998;
+}
+.i{
+    color: #6a7794;
+}
+.l{
+    color: #0077B5;
+}
+.w{
+    color: #25D366;
+}
+
+@media screen and (max-width:775px) {
+    footer{
+        flex-direction: column;
+        gap: 15px;
+    }
+    footer span{
+        text-align: center;
+    }
+}
+
+
+

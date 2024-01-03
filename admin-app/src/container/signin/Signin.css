@@ -1,0 +1,43 @@
+
+.container{
+    background: rgb(255, 245, 245);
+    border-color: rgb(238, 238, 238);
+    border-radius: 6px;
+    padding: 50px 10px;
+}
+.container .btn{
+    background: #28a745;
+    border: 1px solid #28a745;
+    width: 100%;
+    transition: 0.3s;
+}
+.container .btn:hover{
+    background: #343a40;
+    border: 1px solid #343a40;
+}
+.container p{
+    font-size: 14px;
+    color: rgb(112, 112, 112);
+    margin-top: 10px;
+}
+.container p .signUp{
+    color: #28a745;
+    margin-left: 10px;
+}
+.container p .signUp:hover{
+    color: #ffc107;
+    margin-left: 10px;
+}
+
+
+
+@media screen and (max-width:600px) {
+    .container{
+        width: 420px;
+    }
+}
+@media screen and (max-width:450px) {
+    .container{
+        width: 285px;
+    }
+}
