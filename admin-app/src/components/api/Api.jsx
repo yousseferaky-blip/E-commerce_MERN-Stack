@@ -1,5 +1,5 @@
 
-export const BASE_URL = 'http://localhost:2000/api' ;
+export const BASE_URL = 'ecommerce-mern-stack-ten.vercel.app/api' ;
 // AUTH
 export const REGISTER = 'signup' ;
 export const LOGIN = 'signin' ;

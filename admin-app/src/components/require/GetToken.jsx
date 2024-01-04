@@ -7,7 +7,6 @@ const getToken = () => {
   const setToken = (token) => {
     localStorage.setItem('token', token);
   
-    // تعيين الكوكيز مع اهتمامات إضافية
     const cookies = new Cookies();
     cookies.set('Ecommerce', token, { sameSite: 'lax', secure: process.env.NODE_ENV === 'production' });
   };
@@ -15,7 +14,6 @@ const getToken = () => {
   const removeToken = () => {
     localStorage.removeItem('token');
   
-    // إزالة الكوكيز
     const cookies = new Cookies();
     cookies.remove('Ecommerce', { sameSite: 'lax', secure: process.env.NODE_ENV === 'production' });
   };

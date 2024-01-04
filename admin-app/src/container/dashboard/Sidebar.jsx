@@ -1,8 +1,7 @@
-// Sidebar.js
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faPlus, faList, faTimes , faBox } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faPlus, faTimes , faBox } from "@fortawesome/free-solid-svg-icons";
 import "./Dashboard.css";
 
 const Sidebar = () => {

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useStripe, useElements, CardElement } from '@stripe/react-stripe-js';
 import './payment.css'; 
+import { BASE_URL } from '../../components/api/Api';
 
 const CheckoutForm = ({ amount }) => {
   const stripe = useStripe();
@@ -19,14 +20,14 @@ const CheckoutForm = ({ amount }) => {
     if (error) {
       setPaymentError(error.message);
     } else {
-      console.log('Amount:', amount); // إضافة هذا السطر
+      console.log('Amount:', amount); 
       handlePayment(token);
     }
   };
 
   const handlePayment = async (token) => {
     try {
-      const response = await fetch('http://localhost:2000/api/create-payment-intent', {
+      const response = await fetch(`${BASE_URL}/create-payment-intent`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
